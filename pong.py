@@ -64,7 +64,7 @@ class Simulate: #시각화
         self.window.onkey(self.pong.playerL_up, "w")
         self.window.onkey(self.pong.playerL_down, "s")
         self.window.onkey(self.pong.playerR_up, "Up")
-        self.window.onkey(self.pong.player_down, "Down")
+        self.window.onkey(self.pong.playerR_down, "Down")
 
         # e.g. self.window.onkey(<func_to_run>, <key:string>) -> pointer
 
