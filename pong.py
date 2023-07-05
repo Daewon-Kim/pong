@@ -20,15 +20,19 @@ class Pong:
     # MEMBER-3/4
     # player move functions
     def playerL_up(self):
+        self.playerL.position[1] +=10
         writer.clear(); writer.write("playerL_up"+str(self.playerL.pos))
 
     def playerR_up(self):
+        self.playerR.position[1] += 10
         writer.clear(); writer.write("playerR_up"+str(self.playerR.pos))
 
     def playerL_down(self):
+        self.playerL.position[1] -= 10
         writer.clear(); writer.write("playerL_down"+str(self.playerL.pos))
 
     def playerR_down(self):
+        self.playerR.position[1] -= 10
         writer.clear(); writer.write("playerR_down"+str(self.playerR.pos))
 
 
@@ -67,6 +71,6 @@ class Simulate:
 
 pong = Pong()
 sim = Simulate(pong)
-
+pong.playerL_up
 t.done()
 
