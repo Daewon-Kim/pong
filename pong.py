@@ -4,7 +4,7 @@ writer = t.Turtle()
 
 
 class Object2D:
-    def __init__(self, pos=[0,0], shape="square", width=2, height=2, dx=0,  dy=0, color="white"):
+    def __init__(self, pos=[0,0], shape="square", width=2, height=2, dx=0, dy=0, color="white"):
         self.pos, self.shape, self.width, self.height = pos, shape, width, height
         self.dx, self.dy = dx, dy
         self.color = color
@@ -13,8 +13,8 @@ class Object2D:
 class Pong:
     def __init__(self):
         self.board_size = [800, 600]
-        self.playerL = Object2D(pos=[-350, 0], width=4, height=1)
-        self.playerR = Object2D(pos=[350, 0], width=4, height=1)
+        self.playerL = Object2D(pos=[-350, 0], shape="square", color = "white", dx=0.2, dy=0.2,width=4, height=1)
+        self.playerR = Object2D(pos=[350, 0], shape="square" , color = "black" ,dx=0.2, dy=0.2, width=4, height=1)
         self.ball = Object2D(pos=[0,0], shape="circle", color="orange", dx=0.2, dy=0.2)
 
     # MEMBER-3/4
@@ -45,6 +45,8 @@ class Simulate: #시각화
         # Use the draw_obj() below to draw the ball and players/paddles.
         # e.g., self.ball = self.draw_obj(...)
         self.ball = self.draw_obj(self.pong.ball)
+        self.playerL = self.draw_obj(self.pong.playerL)
+        self.playerR = self.draw_obj(self.pong.playerR)
         self.window.update()
         self.bind_keys()
 
@@ -69,5 +71,4 @@ pong = Pong()
 sim = Simulate(pong)
 
 t.done()
-
 
