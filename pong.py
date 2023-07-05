@@ -19,16 +19,21 @@ class Pong:
 
     # MEMBER-3/4
     # player move functions
-    def playerL_up(self): #y축 더하고 빼기
+    def playerL_up(self):
+        self.playerL.position[1] +=10
         writer.clear(); writer.write("playerL_up"+str(self.playerL.pos))
 
-    def playerR_up(self): #y축 더하고 빼기 , 플레이어 L의 self.playerL.pos(10,0)
+    def playerR_up(self):
+        self.playerR.position[1] += 10
         writer.clear(); writer.write("playerR_up"+str(self.playerR.pos))
 
-    def playerL_down(self):#y축 더하고 빼기 , 플레이어 L의 self.playerL.pos(-10,0)
+    def playerL_down(self):
+        self.playerL.position[1] -= 10
+
         writer.clear(); writer.write("playerL_down"+str(self.playerL.pos))
 
     def playerR_down(self):
+        self.playerR.position[1] -= 10
         writer.clear(); writer.write("playerR_down"+str(self.playerR.pos))
 
 
@@ -77,7 +82,7 @@ class Simulate: #시각화
 
 pong = Pong()
 sim = Simulate(pong)
-
+pong.playerL_up
 t.done()
 
 
