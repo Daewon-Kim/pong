@@ -62,10 +62,10 @@ class Simulate: #시각화
         # add four key-events: w,s keys: playerL_up:down, Up,Down arrows: PlayerR_up:down
 
         # e.g. self.window.onkey(<func_to_run>, <key:string>)
-        self.window.onkey(self.pong.playerL_up, "w")
-        self.window.onkey(self.pong.playerL_down, "s")
-        self.window.onkey(self.pong.playerR_up, "Up")
-        self.window.onkey(self.pong.playerR_down, "Down")
+        self.window.onkey(self.pong.playerL, "w")
+        self.window.onkey(self.pong.playerL, "s")
+        self.window.onkey(self.pong.playerR, "Up")
+        self.window.onkey(self.pong.playerR, "Down")
 
         # e.g. self.window.onkey(<func_to_run>, <key:string>) -> pointer
 
